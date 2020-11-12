@@ -30,7 +30,10 @@
 .item_data{
     padding-top: 10px;
     padding-left: 15px;
+}
 
+.add-button{
+    text-align: center;
 }
 
 </style>
@@ -38,6 +41,10 @@
 
 
 <body>
+<div class="add-button">
+    <a href="/add" target="_self" style="float: left; margin: 10px"> <button>Добавить товар</button></a>
+</div>
+
         <div>
             <a class="cart" href="/cart" style="float: right; margin: 10px">
                 <button>
@@ -46,11 +53,9 @@
             </a>
         </div>
 
-    <div style="text-align: center"><h1> Список товаров</h1></div>
+    <div style="text-align: center;"><h1> Список товаров</h1></div>
 
-    <div class="add-button">
-            <p class="add-button"><a href="/add" target="_self">Добавить товар</a></p>
-    </div>
+
     <div class="content">
 
         <div  th:id="${item.getName()} + -item" th:each="item : ${items}">

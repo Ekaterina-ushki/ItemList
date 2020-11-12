@@ -25,7 +25,7 @@ public class AddController {
         return modelAndView;
     }
 
-    @ResponseBody
+
     @RequestMapping(path = "/add/{id}/cart", method = RequestMethod.POST)
     public void addInCart(@PathVariable("id") int id) {
         ItemService itemService = new ItemService();
